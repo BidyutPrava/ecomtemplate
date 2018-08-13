@@ -6,6 +6,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { MenuItemComponent } from './menu-item/menu-item.component';
     MatIconModule,
     MatCardModule,
     MatMenuModule,
-    RouterModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
