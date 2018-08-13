@@ -1,0 +1,75 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row class="top-toolbar theme-container" style="place-content: center space-between; align-items: center; flex-direction: row; box-sizing: border-box; display: flex;">
+      <span fxlayoutalign="center center" fxshow="false" fxshow.gt-xs="" style="place-content: center; align-items: center; flex-direction: row; box-sizing: border-box; display: flex;">
+        <mat-icon  >call</mat-icon> Hotline: (+100) 123 456 7890 </span>
+      <span style="display: block;text-align:center;">Welcome to our market!</span>
+      <span>
+        <a [matMenuTriggerFor]="menu" class="mat-button">
+          <mat-icon role="img" aria-hidden="true">person</mat-icon>
+          <span class="mat-button-wrapper">
+            <span fxshow="false" fxshow.gt-sm="" style="display: inline;">ACCOUNT</span>
+            <mat-icon class="mat-icon-sm caret mat-icon material-icons" role="img" aria-hidden="true">arrow_drop_down</mat-icon>
+          </span>
+        </a>
+        <mat-menu [overlapTrigger]="false" class="my-full-width-menu" #menu="matMenu" color="accent">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>Duffy</mat-card-title>
+          </mat-card-header>
+          <hr>
+          <button mat-menu-item>Settings</button>
+          <button mat-menu-item>My orders</button>
+        </mat-menu>
+      </span>
+
+    </mat-toolbar-row>
+    <mat-toolbar-row style="height:100px;place-content: center space-between; align-items: center; flex-direction: row; box-sizing: border-box; display: flex;">
+      <span>My Template</span>  
+      <div   style="flex: 1 1 0%; box-sizing: border-box; margin-left: 10%; display: block;">
+      <form class="search-form" method="get" style="flex-direction: row; box-sizing: border-box; display: flex;">
+          <button aria-haspopup="true" mat-raised-button type="button" class="text-muted">
+            <span class="mat-button-wrapper">All Categories
+              <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">arrow_drop_down</mat-icon>
+            </span>
+          </button>
+          <input placeholder="Type to search..."  type="text">
+          <button class="search-btn mat-mini-fab mat-accent" type="button">
+            <span class="mat-button-wrapper">
+              <mat-icon role="img" aria-hidden="true">search</mat-icon>
+            </span>
+              <div class="mat-button-ripple mat-ripple mat-button-ripple-round" >
+
+          </div>
+          <div class="mat-button-focus-overlay">
+
+          </div>
+        </button>
+        </form>
+      </div>
+      <div style="margin-left:10%">
+          <a aria-haspopup="true" mat-button="" [matMenuTriggerFor]="menu" class="mat-button" tabindex="0" aria-disabled="false">
+              <mat-icon class="mat-icon-lg mat-icon material-icons" role="img" aria-hidden="true">shopping_cart</mat-icon>
+            <span class="mat-button-wrapper">
+              <span style="display: inline;">Shopping Cart</span>
+              <mat-icon class="mat-icon-sm caret mat-icon material-icons" role="img" aria-hidden="true">arrow_drop_down</mat-icon>
+            </span>
+          </a>
+          <mat-menu [overlapTrigger]="false" color="accent" class="my-full-width-menu" #menu="matMenu" color="accent">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Duffy</mat-card-title>
+            </mat-card-header>
+            <hr>
+            <button mat-menu-item>Settings</button>
+            <button mat-menu-item>My orders</button>
+          </mat-menu>
+        </div>
+      
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
