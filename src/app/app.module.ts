@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule } from '@angular/material';
+import { MatButtonModule, MatToolbarModule, MatIconModule, MatCardModule ,MatGridListModule} from '@angular/material';
 import {MatMenuModule} from '@angular/material/menu';
 import {RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
@@ -23,7 +23,8 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
     MatCardModule,
     MatMenuModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
