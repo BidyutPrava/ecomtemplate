@@ -1,5 +1,5 @@
 .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-image: url('https://material.angular.io/assets/img/examples/shiba.jpg');
     background-size: cover;
     margin-left: 10px;
 }
@@ -32,13 +32,25 @@ font-size: 13px;
   /deep/ .mat-menu-panel{
       min-width: 145px !important;
   }
-  .mat-menu-item{
-      color: #000000;
+  /deep/ .mat-menu-item{
+      color: #000000 !important;
   }
+
+  /deep/ .mat-icon{
+    color: #000000 !important;
+}
 
   .search-form{
         border-radius: 22px;
         overflow: hidden;
+        flex-direction: row;
+box-sizing: border-box;
+display: flex;
+width: 85%;
+margin-left: 10%;
+flex-direction: row;
+ box-sizing: border-box;
+  display: flex;
   }
 
   .search-btn {
@@ -58,4 +70,14 @@ font-size: 13px;
     background: #fff;
     box-shadow: none !important;
     border-right: 1px solid lightgray;
+}
+
+.menu-card{
+    background-color: white;
+    width:100%;
+    height: 0px;place-content: center;
+    align-items: center;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
 }

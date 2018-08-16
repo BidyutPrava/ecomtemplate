@@ -28,66 +28,59 @@
     <mat-toolbar-row  fxlayoutalign="space-between center" style="height:100px;place-content: center space-between; align-items: center; flex-direction: row; box-sizing: border-box; display: flex;">
       <span>My Template</span>  
       <div   style="flex: 1 1 0%; box-sizing: border-box; margin-left: 10%; display: block;">
-      <form class="search-form" method="get" style="flex-direction: row; box-sizing: border-box; display: flex;">
-          <button aria-haspopup="true" mat-raised-button type="button">
+      <form class="search-form" method="get">
+          <button class="text-muted" aria-haspopup="true" mat-raised-button type="button">
             <span class="mat-button-wrapper">All Categories
               <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">arrow_drop_down</mat-icon>
             </span>
-            <div class="mat-button-ripple mat-ripple" matripple="">
-
-            </div>
-            <div class="mat-button-focus-overlay">
-
-            </div>
           </button>
           <input placeholder="Type to search..."  type="text">
           <button class="search-btn mat-mini-fab mat-accent" type="button">
             <span class="mat-button-wrapper">
               <mat-icon role="img" aria-hidden="true">search</mat-icon>
             </span>
-              <div class="mat-button-ripple mat-ripple mat-button-ripple-round" >
-
-          </div>
-          <div class="mat-button-focus-overlay">
-
-          </div>
         </button>
         </form>
       </div>
       <div style="margin-left:10%">
-          <a aria-haspopup="true" mat-button="" [matMenuTriggerFor]="menu" class="mat-button" tabindex="0" aria-disabled="false">
+          <a aria-haspopup="true" mat-button="" [matMenuTriggerFor]="menu1" class="mat-button" tabindex="0" aria-disabled="false">
               <mat-icon class="mat-icon-lg mat-icon material-icons" role="img" aria-hidden="true">shopping_cart</mat-icon>
             <span class="mat-button-wrapper">
               <span style="display: inline;">Shopping Cart</span>
               <mat-icon class="mat-icon-sm caret mat-icon material-icons" role="img" aria-hidden="true">arrow_drop_down</mat-icon>
             </span>
           </a>
-          <mat-menu [overlapTrigger]="false" color="accent" class="my-full-width-menu" #menu="matMenu" color="accent">
-            
+          <mat-menu [overlapTrigger]="false" color="accent" class="my-full-width-menu" #menu1="matMenu" color="accent">
+            <mat-card-header>  
+            <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title>Duffy1</mat-card-title>
+            </mat-card-header>
+            <hr>
+            <button mat-menu-item>Settings1</button>
+            <button mat-menu-item>My orders1</button>
           </mat-menu>
         </div>
       
     </mat-toolbar-row>
   </mat-toolbar>
-  <mat-toolbar>
-      <div class="basic-container">
+  <mat-card class="menu-card" >
+      <mat-card-title>      
           <span *ngFor="let item of navItems">
             <!-- Handle branch node buttons here -->
             <span *ngIf="item.children && item.children.length > 0">
-              <a color="primary" [matMenuTriggerFor]="menu.childMenu">
-                {{item.displayName}}
-                <mat-icon>expand_more</mat-icon>
+              <a mat-button [matMenuTriggerFor]="menu.childMenu">
+                <span style="color: black;padding: 5px">{{item.displayName}}</span>
+                <mat-icon>arrow_drop_down</mat-icon>
               </a>
               <app-menu-item #menu [items]="item.children"></app-menu-item>
             </span>
             <!-- Leaf node buttons here -->
             <span *ngIf="!item.children || item.children.length === 0">
-              <button mat-button color="primary" [routerLink]="item.route">
+              <a mat-button color="primary" [routerLink]="item.route">
                 {{item.displayName}}
-              </button>
+              </a>
             </span>
           </span>
-        </div>
-  </mat-toolbar>
-
+          </mat-card-title>
+</mat-card>
 </div>
