@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MenuItemComponent } from './menu-item/menu-item.component';
 import {AppRoutingModule} from './app-routing.module';
 import { HomeComponent } from './home/home.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomeComponent } from './home/home.component';
     MatCardModule,
     MatMenuModule,
     AppRoutingModule,
-    MatGridListModule
+    MatGridListModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
