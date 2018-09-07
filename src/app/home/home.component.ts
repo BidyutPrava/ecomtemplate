@@ -12,10 +12,10 @@ export class HomeComponent implements OnInit {
     {text: 'Two', cols: 1, rows: 1, color: '#B7A0E8'},
     {text: 'Three', cols: 1, rows: 2, color: '#FF0000'},
     {text: 'Four', cols: 3, rows: 1, color: '#D9EDD9'},
-    {text: 'One', cols: 2, rows: 1, color: '#142A5C'},
-    {text: 'Two', cols: 1, rows: 1, color: '#B7A0E8'},
-    {text: 'Three', cols: 1, rows: 2, color: '#FF0000'},
-    {text: 'Four', cols: 3, rows: 1, color: '#D9EDD9'},
+    {text: 'five', cols: 2, rows: 1, color: '#142A5C'},
+    {text: 'six', cols: 1, rows: 1, color: '#B7A0E8'},
+    {text: 'seven', cols: 1, rows: 2, color: '#FF0000'},
+    {text: 'eight', cols: 3, rows: 1, color: '#D9EDD9'},
   ];
   constructor() { }
 
